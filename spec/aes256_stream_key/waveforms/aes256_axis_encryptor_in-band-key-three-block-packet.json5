@@ -1,0 +1,52 @@
+{
+  "head": {
+    "text": "AES-256 in-band key and fixed-latency payload",
+    "tick": 0
+  },
+  "signal": [
+    {
+      "name": "i_axis_aclk",
+      "wave": "p....................."
+    },
+    {
+      "name": "i_axis_aresetn",
+      "wave": "01...................."
+    },
+    {
+      "name": "i_s_axis_tvalid",
+      "wave": "01....0..............."
+    },
+    {
+      "name": "i_s_axis_tdata",
+      "wave": "x34567x...............",
+      "data": [
+        "KEY[255:128]",
+        "KEY[127:0]",
+        "P0",
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "name": "i_s_axis_tlast",
+      "wave": "0....10..............."
+    },
+    {
+      "name": "o_m_axis_tvalid",
+      "wave": "0................1..0."
+    },
+    {
+      "name": "o_m_axis_tdata",
+      "wave": "x................345x.",
+      "data": [
+        "C0",
+        "C1",
+        "C2"
+      ]
+    },
+    {
+      "name": "o_m_axis_tlast",
+      "wave": "0..................10."
+    }
+  ]
+}
